@@ -15,27 +15,31 @@
         <aside>
             <header>
                 <h1 class="logo">Tienda e-comerce</h1>
-                
-                <nav>
-                    <ul class="menu">
-                        <li><a class=" boton_menu boton_volver" href="./index.html"><i class="bi bi-arrow-left-short">
-                                </i> Seguir comprando
-                            </a></li>
-                        <li><a class="boton_menu boton_carrito active" href="./carrito.html"><i class="bi bi-cart"></i>
-                                Carrito</li>
-                    </ul>
-                </nav>
-                <footer class="texto_footer">© 2023 JPDeveloper</footer>
             </header>
+            <nav>
+                <ul class="menu">
+                    <li><a class=" boton_menu boton_volver" href="./index.html"><i class="bi bi-arrow-90deg-left"></i>
+                            </i> Seguir comprando
+                        </a></li>
+                    <li>
+                        <p class="boton_menu boton_carrito active" href="./carrito.html"><i class="bi bi-cart"></i>
+                            Carrito</p>
+                    </li>
+                </ul>
+            </nav>
 
-            </aside>
-            <main>
-                <h2 class="titulo_principal">Carrito</h2>
-                <div class="contenedor_carrito">
-                    <p class="carrito_vacio">Tu carrito esta vacio.<i class="bi bi-emoji-frown"></i></p>
-                    
+            <footer class="text_footer">© 2023 JPDeveloper </footer>
+
+        </aside>
+        <main>
+            <h2 class="titulo_principal">Carrito</h2>
+            <div class="contenedor_carrito">
+                
+                <p class="carrito_vacio">Tu carrito esta vacio<i class="bi bi-emoji-frown"></i></p>
+            
+                <div class="contenedor_carrito_productos disabled">
                     <div class="carrito_producto">
-                        <img src="./imagenes/asador _chico.jpg" alt="">
+                        <img class="carrito_producto_imagen" src="./imagenes/asador _chico.jpg" alt="">
                         <div class="carrito_producto_titulo">
                             <small>titulo</small>
                             <h3>Asador chico</h3>
@@ -52,10 +56,10 @@
                             <small>Subtotal</small>
                             <h3>3500</h3>
                         </div>
-                        <button><i class="bi bi-x-circle-fill"></i></button>
+                        <button class="carrito_producto_eliminar"><i class="bi bi-x-circle-fill"></i></button>
                     </div>
                     <div class="carrito_producto">
-                        <img src="./imagenes/brasero_mesa.jpg" alt="">
+                        <img class="carrito_producto_imagen" src="./imagenes/brasero_mesa.jpg" alt="">
                         <div class="carrito_producto_titulo">
                             <small>titulo</small>
                             <h3>brasero de mesa</h3>
@@ -72,24 +76,27 @@
                             <small>Subtotal</small>
                             <h3>5000</h3>
                         </div>
-                        <button><i class="bi bi-x-circle-fill"></i></button>
+                        <button class="carrito_producto_eliminar"><i class="bi bi-x-circle-fill"></i></button>
                     </div>
                 </div>
-                <div class="carrito_acciones">
+                <div class="carrito_acciones disabled">
                     <div class="carrito_acciones_izquierda">
-                     <button class="carrito_vaciar">Vaciar carrito</button>
+                        <button class="carrito_vaciar">Vaciar carrito</button>
                     </div>
                     <div class="carrito_acciones_derecha">
                         <div class="carrito_total">
                             <p>Total</p>
                             <p id="total_carrito">8500</p>
                         </div>
-                        <button>Finalizar compra</button>
+                        <button class="carrito_comprar">Finalizar compra</button>
                     </div>
+                    
                 </div>
-            </main>
+                <p class="carrito_gracias disabled">Muchas gracias por tu compra<i class="bi bi-emoji-smile"></i></p>
+            </div>
+        </main>
     </div>
-    <script src="./JS/main.js"></script>
+    <!-- <script src="./JS/main.js"></script> -->
     <script src="./JS/carrito.js"></script>
 </body>
 
