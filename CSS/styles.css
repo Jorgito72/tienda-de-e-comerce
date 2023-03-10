@@ -189,6 +189,7 @@ main {
 
 .producto_agregar {
     border: 0;
+    padding: 1rem;
     background-color: var(--clr-white);
     border-radius: 2rem;
     color: var(--clr-main);
