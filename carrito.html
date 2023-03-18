@@ -35,30 +35,11 @@
             <h2 class="titulo_principal">Carrito</h2>
             <div class="contenedor_carrito">
                 
-                <p class="carrito_vacio">Tu carrito esta vacio<i class="bi bi-emoji-frown"></i></p>
+                <p id="carrito_vacio" class="carrito_vacio">Tu carrito esta vacio<i class="bi bi-emoji-frown"></i></p>
             
-                <div class="contenedor_carrito_productos disabled">
-                    <div class="carrito_producto">
-                        <img class="carrito_producto_imagen" src="./imagenes/asador _chico.jpg" alt="">
-                        <div class="carrito_producto_titulo">
-                            <small>titulo</small>
-                            <h3>Asador chico</h3>
-                        </div>
-                        <div class="carrito_producto_precio">
-                            <small>Ppecio</small>
-                            <h3>3500</h3>
-                        </div>
-                        <div class="carrito_producto_cantidad">
-                            <small>Cantidad</small>
-                            <h3>1</h3>
-                        </div>
-                        <div class="carrito_producto_subtotal">
-                            <small>Subtotal</small>
-                            <h3>3500</h3>
-                        </div>
-                        <button class="carrito_producto_eliminar"><i class="bi bi-x-circle-fill"></i></button>
-                    </div>
-                    <div class="carrito_producto">
+                <div id="contenedor_carrito_productos" class="contenedor_carrito_productos disabled">
+                    
+                    <!-- <div class="carrito_producto">
                         <img class="carrito_producto_imagen" src="./imagenes/brasero_mesa.jpg" alt="">
                         <div class="carrito_producto_titulo">
                             <small>titulo</small>
@@ -77,22 +58,22 @@
                             <h3>5000</h3>
                         </div>
                         <button class="carrito_producto_eliminar"><i class="bi bi-x-circle-fill"></i></button>
-                    </div>
+                    </div>  -->
                 </div>
-                <div class="carrito_acciones disabled">
+                <div id="carrito_acciones" class="carrito_acciones disabled">
                     <div class="carrito_acciones_izquierda">
-                        <button class="carrito_vaciar">Vaciar carrito</button>
+                        <button id="boton_vaciar_carrito" class="carrito_vaciar">Vaciar carrito</button>
                     </div>
                     <div class="carrito_acciones_derecha">
                         <div class="carrito_total">
                             <p>Total</p>
-                            <p id="total_carrito">8500</p>
+                            <p id="total_compra_carrito"></p>
                         </div>
-                        <button class="carrito_comprar">Finalizar compra</button>
+                        <button id="terminar_compra" class="carrito_comprar">Finalizar compra</button>
                     </div>
                     
                 </div>
-                <p class="carrito_gracias disabled">Muchas gracias por tu compra<i class="bi bi-emoji-smile"></i></p>
+                <p id="carrito_gracias" class="carrito_gracias disabled">Muchas gracias por tu compra<i class="bi bi-emoji-smile"></i></p>
             </div>
         </main>
     </div>

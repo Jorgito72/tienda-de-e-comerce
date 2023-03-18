@@ -196,16 +196,23 @@ botonesCategorias.forEach(boton =>{
     } )
 });
 
-function actualizarBotonesAgregar(){
+ function actualizarBotonesAgregar(){
     botonesAgregar= document.querySelectorAll(".producto_agregar");
 
      botonesAgregar.forEach(boton =>{
           boton.addEventListener("click", agregarAlCacrrito);
     });
 
-};
+ };
           
- const productosEnCacrrito=[];
+ let productosEnCacrrito=[];
+ const productosEnCacrritoLS = JSON.parse(localStorage.getItem("productos-en-carrito"));
+ if(productosEnCacrritoLS){
+  productosEnCacrrito=productosEnCacrritoLS;
+  actualizarNumerito();
+ }else{
+  productosEnCacrrito=[];
+ }
 
 function agregarAlCacrrito(e){
      const idBoton= e.currentTarget.id;
@@ -219,6 +226,7 @@ function agregarAlCacrrito(e){
 productosEnCacrrito.push(productoAgregado);
     }
     actualizarNumerito();
+    localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCacrrito));
 }
 
 function actualizarNumerito (){
