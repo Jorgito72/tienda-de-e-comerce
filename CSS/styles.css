@@ -167,7 +167,6 @@ main {
     max-width: 100%;
     border-radius: 1rem;
     aspect-ratio: 1/1.2;
-    
 }
 
 .producto_detalles {
@@ -242,6 +241,7 @@ main {
 .carrito_producto_imagen{
    width: 4rem; 
    border-radius: .7rem;
+   aspect-ratio: 1/1.2;
 }
 small{
     font-size: .75rem;
@@ -256,9 +256,7 @@ small{
     display: flex;
     justify-content: space-between;
 }
-.carrito_acciones_izquierda{
 
-}
 .carrito_vaciar{
     border: 0;
     background-color: var(--clr-white);

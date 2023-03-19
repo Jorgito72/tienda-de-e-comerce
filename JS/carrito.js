@@ -9,6 +9,8 @@ const botonVaciarCarrito=document.getElementById("boton_vaciar_carrito");
 const totalCompraCarrito= document.getElementById("total_compra_carrito");
 const botonTerminarCompra=document.getElementById("terminar_compra")
 
+console.log(productosEnCacrrito);
+
 
 function cargarProductosEnCarrito(){
     if (productosEnCacrrito && productosEnCacrrito.length>0){

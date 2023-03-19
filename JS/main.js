@@ -151,6 +151,7 @@ const tituloPrincipal= document.querySelector("#titulo_principal");
 let botonesAgregar= document.querySelectorAll(".producto_agregar");
 const numerito= document.getElementById("numerito");
 
+
 function cargarProductos(productosElegidos){
 
     contenedorProductos.innerHTML="";
@@ -171,6 +172,7 @@ function cargarProductos(productosElegidos){
     })
 
     actualizarBotonesAgregar();
+    
  }; 
 
  cargarProductos(productos);
@@ -206,6 +208,7 @@ botonesCategorias.forEach(boton =>{
  };
           
  let productosEnCacrrito=[];
+
  const productosEnCacrritoLS = JSON.parse(localStorage.getItem("productos-en-carrito"));
  if(productosEnCacrritoLS){
   productosEnCacrrito=productosEnCacrritoLS;
