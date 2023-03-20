@@ -150,7 +150,11 @@ const botonesCategorias= document.querySelectorAll(".boton-categoria");
 const tituloPrincipal= document.querySelector("#titulo_principal");
 let botonesAgregar= document.querySelectorAll(".producto_agregar");
 const numerito= document.getElementById("numerito");
-
+var anchoVentana = window.innerWidth;
+const funcion1 = () => {
+    
+    alert("funcion1");
+  }
 
 function cargarProductos(productosElegidos){
 
@@ -159,7 +163,9 @@ function cargarProductos(productosElegidos){
     productosElegidos.forEach( producto =>{
 
         const div=document.createElement("div");
-        div.classList.add("producto");
+        div.classList.add("clas-sm-6")
+        div.classList.add("col-md-3");
+        
         div.innerHTML=`<img class="producto_imagen" src="${producto.imagen}" alt="${producto.titulo}">
                  
         <div class="producto_detalles">
