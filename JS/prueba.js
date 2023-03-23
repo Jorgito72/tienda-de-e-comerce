@@ -1,10 +1,9 @@
-// PRODUCTOS
 const productos = [
     // Asadores
     {
         id: "asador-01",
         titulo: "Asador chico",
-        imagen: "./imagenes/asador _chico.jpg",
+        imagen: "../imagenes/asador _chico.jpg",
         categoria: {
             nombre: "Parrillas",
             id: "parrillas"
@@ -95,7 +94,7 @@ const productos = [
     //Accesorios
     {
         id: "accesorios-1",
-        titulo: "Brasero decorado",
+        titulo: "Brasero decorad",
         imagen: "./imagenes/brasero_decorado.jpg",
         categoria: {
             nombre: "Accesorios",
@@ -145,16 +144,13 @@ const productos = [
     },
 ];
 
-const contenedorProductos = document.querySelector("#contenedor_productos");
-const botonesCategorias = document.querySelectorAll(".boton-categoria");
+// area de constantes globales//
+
 const tituloPrincipal = document.querySelector("#titulo_principal");
+const contenedorProductos = document.getElementById("contenedor_productos");
+const botonesCategorias = document.querySelectorAll(".boton-categoria");
 let botonesAgregar = document.querySelectorAll(".producto_agregar");
 const numerito = document.getElementById("numerito");
-var anchoVentana = window.innerWidth;
-const botonesAgregarCantidad=document.querySelectorAll(".masCantidad");
-const botonesQuitarCantidad=document.querySelectorAll(".menosCantidad");
-let cantidadParaAgregar=document.querySelectorAll(".cantidadUnidades");
-
 
 function cargarProductos(productosElegidos) {
 
@@ -163,16 +159,37 @@ function cargarProductos(productosElegidos) {
     productosElegidos.forEach(producto => {
 
         const div = document.createElement("div");
-        div.classList.add("clas-sm-6")
-        div.classList.add("col-md-3");
+        //     div.classList.add("clas-6");
+        //     div.classList.add("col-6");
+        //      div.classList.add("");
+
+        //     div.innerHTML = `<img class="producto_imagen" src="${producto.imagen}" alt="${producto.titulo}">
+
+        //     <div class="producto_detalles">
+        //         <h3 class="producto_titulo">${producto.titulo}</h3>
+        //          <p class="producto_precio"><span>$</span>${producto.precio}</p>
+
+
+        // </div>
+        //         <button class="producto_agregar" id="${producto.id}">Agregar</button>
+        //     </div>`;
+
         
-        div.innerHTML=`<img class="producto_imagen" src="${producto.imagen}" alt="${producto.titulo}">
-                 
-        <div class="producto_detalles">
-            <h3 class="producto_titulo">${producto.titulo}</h3>
-             <p class="producto_precio"><span>$</span>${producto.precio}</p>
-            <button class="producto_agregar" id="${producto.id}">Agregar</button>
-        </div>`; 
+       
+        div.classList.add("col-12");
+        div.classList.add("col-md-3");
+        div.classList.add("col-sm-6");
+        div.innerHTML = `<div class="card contenedor_indiv" >
+        <img src="${producto.imagen}" class="card-img-top imagen_card " alt="${producto.titulo}">
+        <div class="card-body">
+          <h5 class="card-title">${producto.titulo}</h5>
+          <p class="card-text text-center"><span>$</span>${producto.precio}</p>
+          
+          <a id="${producto.id}" class="btn btn-light producto_agregar">Agregar </a>
+        </div>
+      </div>`;
+
+
         contenedorProductos.append(div);
 
     })
@@ -242,16 +259,7 @@ function actualizarNumerito() {
     let nuevoNumerito = productosEnCacrrito.reduce((acc, producto) => acc + producto.cantidad, 0);
     numerito.innerText = nuevoNumerito;
 }
-botonesAgregarCantidad.forEach(boton => {
-boton.addEventListener("click", agregarCantidad);
-})
 
-function agregarCantidad(){
-    
 
-    let contador=0;
-    contador=contador++;
 
-cantidadParaAgregar.innerText=contador;
-console.log(contador);
-}
+

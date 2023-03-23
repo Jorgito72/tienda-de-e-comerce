@@ -12,7 +12,8 @@
 
 <body>
     <div class="contenedor">
-        <aside>
+
+        <!-- <aside>
             <header>
                 <h1 class="logo">Tienda e-comerce</h1>
             </header>
@@ -30,15 +31,20 @@
 
             <footer class="text_footer">© 2023 JPDeveloper </footer>
 
-        </aside>
+        </aside> -->
         <main>
-            <h2 class="titulo_principal">Carrito</h2>
+            <div class="header_carrito">
+                <h2 class="titulo_principal">Carrito</h2>
+                <h3 id="seguir_comprando"><a href="./index.html">Segir comprando..!  Desktop</a></h3>
+                <h3><a href="./prueba.html">Segir comprando..! Responsive</a></h3>
+            </div>
             <div class="contenedor_carrito">
-                
+
                 <p id="carrito_vacio" class="carrito_vacio">Tu carrito esta vacio<i class="bi bi-emoji-frown"></i></p>
-            
+
                 <div id="contenedor_carrito_productos" class="contenedor_carrito_productos disabled">
-                    
+
+        
                     <!-- <div class="carrito_producto">
                         <img class="carrito_producto_imagen" src="./imagenes/brasero_mesa.jpg" alt="">
                         <div class="carrito_producto_titulo">
@@ -71,9 +77,10 @@
                         </div>
                         <button id="terminar_compra" class="carrito_comprar">Finalizar compra</button>
                     </div>
-                    
+
                 </div>
-                <p id="carrito_gracias" class="carrito_gracias disabled">Muchas gracias por tu compra<i class="bi bi-emoji-smile"></i></p>
+                <p id="carrito_gracias" class="carrito_gracias disabled">Muchas gracias por tu compra<i
+                        class="bi bi-emoji-smile"></i></p>
             </div>
         </main>
     </div>
