@@ -175,7 +175,7 @@ main {
 } */
 #contenedor_productos{
     margin-bottom: 1rem;
-    
+    background-color: var(--clr-gray);
 }
 .contenedor_indiv{
     margin-top: 1rem;

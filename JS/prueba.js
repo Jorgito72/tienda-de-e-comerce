@@ -152,6 +152,7 @@ const botonesCategorias = document.querySelectorAll(".boton-categoria");
 let botonesAgregar = document.querySelectorAll(".producto_agregar");
 const numerito = document.getElementById("numerito");
 
+
 function cargarProductos(productosElegidos) {
 
     contenedorProductos.innerHTML = "";
@@ -176,9 +177,9 @@ function cargarProductos(productosElegidos) {
 
         
        
-        div.classList.add("col-12");
+        div.classList.add("col-6");
         div.classList.add("col-md-3");
-        div.classList.add("col-sm-6");
+        // div.classList.add("col-sm-6");
         div.innerHTML = `<div class="card contenedor_indiv" >
         <img src="${producto.imagen}" class="card-img-top imagen_card " alt="${producto.titulo}">
         <div class="card-body">
@@ -195,6 +196,7 @@ function cargarProductos(productosElegidos) {
     })
 
     actualizarBotonesAgregar();
+    console.log(screen.width);
 
 };
 
@@ -252,6 +254,7 @@ function agregarAlCacrrito(e) {
         productosEnCacrrito.push(productoAgregado);
     }
     actualizarNumerito();
+    cambiarColorMain();
     localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCacrrito));
 }
 
@@ -260,6 +263,23 @@ function actualizarNumerito() {
     numerito.innerText = nuevoNumerito;
 }
 
+function cambiarColorDeFondoMain() {
+    // Obtener el ancho de la pantalla
+    var anchoPantalla = window.innerWidth;
+    
+    // Obtener el elemento del DOM que quieres cambiar
+    var main=document.getElementById("main");
+    
+    // Si el ancho de la pantalla es mayor o igual a 600px, cambiar el color de fondo
+    if (anchoPantalla >= 600) {
+      main.style.backgroundColor = "red"; // Cambiar el color de fondo a rojo
+    }
+    // else{
+    //     main.style.backgroundColor = " var(--clr-gray)";
+    // }
+  }
 
+  cambiarColorDeFondoMain();
+  
 
 

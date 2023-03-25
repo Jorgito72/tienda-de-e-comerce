@@ -38,12 +38,15 @@ a {
 
 .navbar{
     background-color: var(--clr-main);
-   border-radius: 1rem;
+   
 }
 .numerito{
     margin-left: 1rem;
-    }
+}
+
 .container_master{
+    max-width: 100%; 
+    height: auto;
     background-color: var(--clr-main);
     margin: 0px;
     padding: 1.5rem;
@@ -52,12 +55,17 @@ a {
 
 }
 
+.barrraNav{
+width: 100vw;
+height: auto;
+}
+
 main {
-    background-color: var(--clr-gray);
+    /* background-color:;  var(--clr-gray); */
     margin: 3rem;
     margin-left: 2rem;
     padding: 2rem;
-
+background-color: var(--clr-gray);
     border-radius: 2rem;
 }
 

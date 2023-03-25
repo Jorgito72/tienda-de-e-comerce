@@ -59,3 +59,54 @@ main {
     padding: 2rem;
     border-radius: 2rem;
 }
+.imagen_producto_carrito{
+    width: auto;
+}
+
+.card{
+    display: flex;
+    border-radius: 1rem;
+    max-height: 10rem;
+}
+.img-fluid{
+    max-height: 80%;
+padding: 1rem;
+
+}
+
+.card-title{
+    margin: .5rem;
+    display: flex;
+    width: auto;
+    justify-content: space-between;
+}
+
+.card-text{
+    margin: 1rem;
+}
+.sub_total{
+    display: flex;
+    justify-content: space-between;
+}
+ .mas_menos{
+    background-color: var(--clr-main-light);
+    margin: 1rem;
+    display: flex;
+    border:3px var(--clr-main-light) solid;
+    border-radius: 2rem; 
+    width: 6rem;
+    padding-inline-start: .25rem;
+    padding-inline-end: .25rem;
+    justify-content: space-between;
+ }
+ .menos{
+    background-color: var(--clr-main-light);
+    border: none;
+    border-radius: 50%;
+ }
+
+ .mas{
+    background-color: var(--clr-main-light);
+    border: none;
+    border-radius: 50%; 
+ }

@@ -4,7 +4,7 @@ const productos = [
     {
         id: "asador-01",
         titulo: "Asador chico",
-        imagen: "./imagenes/asador _chico.jpg",
+        imagen: "./imagenes/asador_chico.jpg",
         categoria: {
             nombre: "Parrillas",
             id: "parrillas"
@@ -150,10 +150,8 @@ const botonesCategorias = document.querySelectorAll(".boton-categoria");
 const tituloPrincipal = document.querySelector("#titulo_principal");
 let botonesAgregar = document.querySelectorAll(".producto_agregar");
 const numerito = document.getElementById("numerito");
-var anchoVentana = window.innerWidth;
-const botonesAgregarCantidad=document.querySelectorAll(".masCantidad");
-const botonesQuitarCantidad=document.querySelectorAll(".menosCantidad");
-let cantidadParaAgregar=document.querySelectorAll(".cantidadUnidades");
+let anchoVentana = screen.width;
+
 
 
 function cargarProductos(productosElegidos) {
@@ -235,6 +233,8 @@ function agregarAlCacrrito(e) {
         productosEnCacrrito.push(productoAgregado);
     }
     actualizarNumerito();
+   
+
     localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCacrrito));
 }
 
@@ -246,12 +246,3 @@ botonesAgregarCantidad.forEach(boton => {
 boton.addEventListener("click", agregarCantidad);
 })
 
-function agregarCantidad(){
-    
-
-    let contador=0;
-    contador=contador++;
-
-cantidadParaAgregar.innerText=contador;
-console.log(contador);
-}
