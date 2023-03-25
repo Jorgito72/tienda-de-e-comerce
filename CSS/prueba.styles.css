@@ -64,7 +64,7 @@ main {
     /* background-color:;  var(--clr-gray); */
     margin: 3rem;
     margin-left: 2rem;
-    padding: 2rem;
+    padding: 1rem;
 background-color: var(--clr-gray);
     border-radius: 2rem;
 }
