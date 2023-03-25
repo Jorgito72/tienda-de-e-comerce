@@ -3,7 +3,7 @@ const productos = [
     {
         id: "asador-01",
         titulo: "Asador chico",
-        imagen: "../imagenes/asador _chico.jpg",
+        imagen: "../imagenes/asador_chico.jpg",
         categoria: {
             nombre: "Parrillas",
             id: "parrillas"
