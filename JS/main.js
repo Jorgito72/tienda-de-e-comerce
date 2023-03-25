@@ -176,7 +176,7 @@ function cargarProductos(productosElegidos) {
     })
 
     actualizarBotonesAgregar();
-
+console.log(productos.imagen);
 };
 
 cargarProductos(productos);
