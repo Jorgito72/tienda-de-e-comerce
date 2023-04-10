@@ -74,6 +74,10 @@ padding: 1rem;
 
 }
 
+.card-body{
+    max-width: 100%;
+}
+
 .card-title{
     margin: .5rem;
     display: flex;
@@ -98,6 +102,7 @@ padding: 1rem;
     padding-inline-start: .25rem;
     padding-inline-end: .25rem;
     justify-content: space-between;
+    align-items: center;
  }
  .menos{
     background-color: var(--clr-main-light);

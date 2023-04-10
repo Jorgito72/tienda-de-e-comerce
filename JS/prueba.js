@@ -1,157 +1,172 @@
-const productos = [
-    // Asadores
-    {
-        id: "asador-01",
-        titulo: "Asador chico",
-        imagen: "./imagenes/asador_chico.jpg",
-        categoria: {
-            nombre: "Parrillas",
-            id: "parrillas"
-        },
-        precio: 3500
-    },
-    {
-        id: "asador-02",
-        titulo: "Chulengo",
-        imagen: "./imagenes/chulengo.jpg",
-        categoria: {
-            nombre: "Parrillas",
-            id: "parrillas"
-        },
-        precio: 3500
-    },
-    {
-        id: "asador-03",
-        titulo: "Parrilla Boca Jr",
-        imagen: "./imagenes/parrilla_boca_jrs.jpg",
-        categoria: {
-            nombre: "Parrillas",
-            id: "parrillas"
-        },
-        precio: 1000
-    },
-    {
-        id: "asador-04",
-        titulo: "Parrila River Plate",
-        imagen: "./imagenes/parrilla_river.jpg",
-        categoria: {
-            nombre: "Parrillas",
-            id: "parrillas"
-        },
-        precio: 3500
-    },
-    {
-        id: "asador-05",
-        titulo: "Parrilla portatil",
-        imagen: "./imagenes/parrilla_portatil_1.jpg",
-        categoria: {
-            nombre: "Parrillas",
-            id: "parrillas"
-        },
-        precio: 3500
-    },
-    {
-        id: "asador-06",
-        titulo: "Parrilla clasica",
-        imagen: "./imagenes/prrilla_clasica.jpg",
-        categoria: {
-            nombre: "Parrillas",
-            id: "parrillas"
-        },
-        precio: 3500
-    },
-    // Discos
-    {
-        id: "discos-01",
-        titulo: "Disco con tapa",
-        imagen: "./imagenes/disco _con _tapa.jpg",
-        categoria: {
-            nombre: "Discos",
-            id: "discos"
-        },
-        precio: 2500
-    },
-    {
-        id: "discos-02",
-        titulo: "Disco parrilla",
-        imagen: "./imagenes/disco_con_parrilla.jpg",
-        categoria: {
-            nombre: "Discos",
-            id: "discos"
-        },
-        precio: 2500
-    },
-    {
-        id: "discos-03",
-        titulo: "Disco con patas",
-        imagen: "./imagenes/disco con patas.jpg",
-        categoria: {
-            nombre: "Discos",
-            id: "discos"
-        },
-        precio: 2500
-    },
-    //Accesorios
-    {
-        id: "accesorios-1",
-        titulo: "Brasero decorad",
-        imagen: "./imagenes/brasero_decorado.jpg",
-        categoria: {
-            nombre: "Accesorios",
-            id: "accesorios"
-        },
-        precio: 1500
-    },
-    {
-        id: "accesorios-2",
-        titulo: "Brasero de mesa",
-        imagen: "./imagenes/brasero_mesa.jpg",
-        categoria: {
-            nombre: "Accesorios",
-            id: "accesorios"
-        },
-        precio: 1500
-    },
-    {
-        id: "accesorios-3",
-        titulo: "Jaula parrilla",
-        imagen: "./imagenes/jaula_parrrilla.jpg",
-        categoria: {
-            nombre: "Accesorios",
-            id: "accesorios"
-        },
-        precio: 1500
-    },
-    {
-        id: "accesorios-4",
-        titulo: "Kit asador",
-        imagen: "./imagenes/kit_asador.jpg",
-        categoria: {
-            nombre: "Accesorios",
-            id: "accesorios"
-        },
-        precio: 150
-    },
-    {
-        id: "accesorios-5",
-        titulo: "Set cubiertos",
-        imagen: "./imagenes/set_cubiertos _asado.jpg",
-        categoria: {
-            nombre: "Accesorios",
-            id: "accesorios"
-        },
-        precio: 150
-    },
-];
+// const productos = [
+//     // Asadores
+//     {
+//         id: "asador-01",
+//         titulo: "Asador chico",
+//         imagen: "./imagenes/asador_chico.jpg",
+//         categoria: {
+//             nombre: "Parrillas",
+//             id: "parrillas"
+//         },
+//         precio: 3500
+//     },
+//     {
+//         id: "asador-02",
+//         titulo: "Chulengo",
+//         imagen: "./imagenes/chulengo.jpg",
+//         categoria: {
+//             nombre: "Parrillas",
+//             id: "parrillas"
+//         },
+//         precio: 3500
+//     },
+//     {
+//         id: "asador-03",
+//         titulo: "Parrilla Boca Jr",
+//         imagen: "./imagenes/parrilla_boca_jrs.jpg",
+//         categoria: {
+//             nombre: "Parrillas",
+//             id: "parrillas"
+//         },
+//         precio: 1000
+//     },
+//     {
+//         id: "asador-04",
+//         titulo: "Parrila River Plate",
+//         imagen: "./imagenes/parrilla_river.jpg",
+//         categoria: {
+//             nombre: "Parrillas",
+//             id: "parrillas"
+//         },
+//         precio: 3500
+//     },
+//     {
+//         id: "asador-05",
+//         titulo: "Parrilla portatil",
+//         imagen: "./imagenes/parrilla_portatil_1.jpg",
+//         categoria: {
+//             nombre: "Parrillas",
+//             id: "parrillas"
+//         },
+//         precio: 3500
+//     },
+//     {
+//         id: "asador-06",
+//         titulo: "Parrilla clasica",
+//         imagen: "./imagenes/prrilla_clasica.jpg",
+//         categoria: {
+//             nombre: "Parrillas",
+//             id: "parrillas"
+//         },
+//         precio: 3500
+//     },
+//     // Discos
+//     {
+//         id: "discos-01",
+//         titulo: "Disco con tapa",
+//         imagen: "./imagenes/disco _con _tapa.jpg",
+//         categoria: {
+//             nombre: "Discos",
+//             id: "discos"
+//         },
+//         precio: 2500
+//     },
+//     {
+//         id: "discos-02",
+//         titulo: "Disco parrilla",
+//         imagen: "./imagenes/disco_con_parrilla.jpg",
+//         categoria: {
+//             nombre: "Discos",
+//             id: "discos"
+//         },
+//         precio: 2500
+//     },
+//     {
+//         id: "discos-03",
+//         titulo: "Disco con patas",
+//         imagen: "./imagenes/disco con patas.jpg",
+//         categoria: {
+//             nombre: "Discos",
+//             id: "discos"
+//         },
+//         precio: 2500
+//     },
+//     //Accesorios
+//     {
+//         id: "accesorios-1",
+//         titulo: "Brasero decorad",
+//         imagen: "./imagenes/brasero_decorado.jpg",
+//         categoria: {
+//             nombre: "Accesorios",
+//             id: "accesorios"
+//         },
+//         precio: 1500
+//     },
+//     {
+//         id: "accesorios-2",
+//         titulo: "Brasero de mesa",
+//         imagen: "./imagenes/brasero_mesa.jpg",
+//         categoria: {
+//             nombre: "Accesorios",
+//             id: "accesorios"
+//         },
+//         precio: 1500
+//     },
+//     {
+//         id: "accesorios-3",
+//         titulo: "Jaula parrilla",
+//         imagen: "./imagenes/jaula_parrrilla.jpg",
+//         categoria: {
+//             nombre: "Accesorios",
+//             id: "accesorios"
+//         },
+//         precio: 1500
+//     },
+//     {
+//         id: "accesorios-4",
+//         titulo: "Kit asador",
+//         imagen: "./imagenes/kit_asador.jpg",
+//         categoria: {
+//             nombre: "Accesorios",
+//             id: "accesorios"
+//         },
+//         precio: 150
+//     },
+//     {
+//         id: "accesorios-5",
+//         titulo: "Set cubiertos",
+//         imagen: "./imagenes/set_cubiertos _asado.jpg",
+//         categoria: {
+//             nombre: "Accesorios",
+//             id: "accesorios"
+//         },
+//         precio: 150
+//     },
+// ];
+
+var productos = [];
+
+fetch("./JSON/productos.json")
+    .then(res => res.json())
+    .then(data => {
+        productos = data;
+        // console.log(data);
+        cargarProductos(productos);
+    })
 
 // area de constantes globales//
 
 const tituloPrincipal = document.querySelector("#titulo_principal");
 const contenedorProductos = document.getElementById("contenedor_productos");
+const contenedorDescripcion = document.getElementById("contenedor_descripcion");
 const botonesCategorias = document.querySelectorAll(".boton-categoria");
 let botonesAgregar = document.querySelectorAll(".producto_agregar");
+let botonesDescripcion = document.querySelectorAll(".descripcion");
+let botonVolver = document.getElementById("btnVolver");
 const numerito = document.getElementById("numerito");
+let productosEnCacrrito = [];
 
+//
 
 function cargarProductos(productosElegidos) {
 
@@ -160,33 +175,18 @@ function cargarProductos(productosElegidos) {
     productosElegidos.forEach(producto => {
 
         const div = document.createElement("div");
-        //     div.classList.add("clas-6");
-        //     div.classList.add("col-6");
-        //      div.classList.add("");
 
-        //     div.innerHTML = `<img class="producto_imagen" src="${producto.imagen}" alt="${producto.titulo}">
-
-        //     <div class="producto_detalles">
-        //         <h3 class="producto_titulo">${producto.titulo}</h3>
-        //          <p class="producto_precio"><span>$</span>${producto.precio}</p>
-
-
-        // </div>
-        //         <button class="producto_agregar" id="${producto.id}">Agregar</button>
-        //     </div>`;
-
-        
-       
         div.classList.add("col-6");
         div.classList.add("col-md-3");
         // div.classList.add("col-sm-6");
         div.innerHTML = `<div class="card contenedor_indiv" >
         <img src="${producto.imagen}" class="card-img-top imagen_card " alt="${producto.titulo}">
-        <div class="card-body">
+        <div class="card-body card-body-chico">
           <h5 class="card-title">${producto.titulo}</h5>
           <p class="card-text text-center"><span>$</span>${producto.precio}</p>
           
           <a id="${producto.id}" class="btn btn-light producto_agregar">Agregar </a>
+          <a id="${producto.id}" class="btn btn-light descripcion">Descripcion </a>
         </div>
       </div>`;
 
@@ -196,11 +196,12 @@ function cargarProductos(productosElegidos) {
     })
 
     actualizarBotonesAgregar();
-    console.log(screen.width);
+    actualizarbotonesDescripcion();
+    
 
 };
 
-cargarProductos(productos);
+
 
 
 botonesCategorias.forEach(boton => {
@@ -232,7 +233,21 @@ function actualizarBotonesAgregar() {
 
 };
 
-let productosEnCacrrito = [];
+function actualizarbotonesDescripcion() {
+    botonesDescripcion = document.querySelectorAll(".descripcion");
+
+    botonesDescripcion.forEach(boton => {
+        boton.addEventListener("click", mostrarDescripcion);
+    });
+
+};
+
+function actualizarbotonVolver() {
+    botonVolver = document.getElementById("btnVolver");
+
+    botonVolver.addEventListener("click", salirDescripcion);
+
+};
 
 const productosEnCacrritoLS = JSON.parse(localStorage.getItem("productos-en-carrito"));
 if (productosEnCacrritoLS) {
@@ -254,32 +269,57 @@ function agregarAlCacrrito(e) {
         productosEnCacrrito.push(productoAgregado);
     }
     actualizarNumerito();
-    cambiarColorMain();
+
     localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCacrrito));
-}
+};
 
 function actualizarNumerito() {
     let nuevoNumerito = productosEnCacrrito.reduce((acc, producto) => acc + producto.cantidad, 0);
     numerito.innerText = nuevoNumerito;
 }
 
-function cambiarColorDeFondoMain() {
-    // Obtener el ancho de la pantalla
-    var anchoPantalla = window.innerWidth;
+function mostrarDescripcion(e) {
+// contenedorDescripcion.innerHTML="";
+
+    const idBotonDescr = e.currentTarget.id;
+    const productoDescripto = productos.find(producto => producto.id === idBotonDescr);
+
+    // console.log(productoDescripto);
+    contenedorProductos.classList.add("contenedor_productos");
+    contenedorDescripcion.classList.remove("contenedor-descripcion");
+    const div = document.createElement("div");
+
+    div.classList.add("col");
+
+    div.innerHTML = `<div class="card contenedor_indiv" >
+                    <img src="${productoDescripto.imagen}" class="card-img-top imagen_card" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">${productoDescripto.titulo}</h5>
+                      <p class="card-text">${productoDescripto.descripcion}Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item">${productoDescripto.categoria.nombre}</li>
+                      <li class="list-group-item">${productoDescripto.precio}</li>
+                      <li class="list-group-item">A third item</li>
+                    </ul>
+                    <div class="card-body">
+                      <a href="" class="card-link boton_description" id="btnVolver">volver</a>
+                      <a href="" class="card-link boton_description" id="${productoDescripto.id}">comprar</a>
+                    </div>
+                  </div> `;
+
+        contenedorDescripcion.append(div);
+        actualizarbotonVolver();
+
+};
+
+
+
+function salirDescripcion() {
+    // console.log("Saliendo")
+contenedorDescripcion.innerHTML="";
     
-    // Obtener el elemento del DOM que quieres cambiar
-    var main=document.getElementById("main");
-    
-    // Si el ancho de la pantalla es mayor o igual a 600px, cambiar el color de fondo
-    if (anchoPantalla >= 600) {
-      main.style.backgroundColor = "red"; // Cambiar el color de fondo a rojo
-    }
-    // else{
-    //     main.style.backgroundColor = " var(--clr-gray)";
-    // }
-  }
+     contenedorProductos.classList.remove("contenedor_productos");
+};
 
-  cambiarColorDeFondoMain();
-  
-
-
+// botonVolver.addEventListener("click",salirDescripcion);

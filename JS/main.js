@@ -176,7 +176,7 @@ function cargarProductos(productosElegidos) {
     })
 
     actualizarBotonesAgregar();
-console.log(productos.imagen);
+
 };
 
 cargarProductos(productos);
@@ -219,7 +219,7 @@ if (productosEnCacrritoLS) {
     actualizarNumerito();
 } else {
     productosEnCacrrito = [];
-}
+};
 
 function agregarAlCacrrito(e) {
     const idBoton = e.currentTarget.id;
@@ -242,7 +242,5 @@ function actualizarNumerito() {
     let nuevoNumerito = productosEnCacrrito.reduce((acc, producto) => acc + producto.cantidad, 0);
     numerito.innerText = nuevoNumerito;
 }
-botonesAgregarCantidad.forEach(boton => {
-boton.addEventListener("click", agregarCantidad);
-})
+
 
