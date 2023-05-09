@@ -154,6 +154,9 @@ fetch("./JSON/productos.json")
         cargarProductos(productos);
     })
 
+    // funcion para traer datos de los productos desde un exel//
+
+    
 // area de constantes globales//
 
 const tituloPrincipal = document.querySelector("#titulo_principal");
@@ -298,8 +301,8 @@ function mostrarDescripcion(e) {
                       <p class="card-text">${productoDescripto.descripcion}Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                     </div>
                     <ul class="list-group list-group-flush">
-                      <li class="list-group-item">${productoDescripto.categoria.nombre}</li>
-                      <li class="list-group-item">${productoDescripto.precio}</li>
+                      <li class="list-group-item">Categoria: ${productoDescripto.categoria.nombre}</li>
+                      <li class="list-group-item">$ ${productoDescripto.precio}</li>
                       <li class="list-group-item">A third item</li>
                     </ul>
                     <div class="card-body">

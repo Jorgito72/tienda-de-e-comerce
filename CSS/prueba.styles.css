@@ -242,9 +242,8 @@ background-color: var(--clr-gray);
     border: 2px var(--clr-white);
     cursor: pointer; 
 }
-#description_container{
-    /* display: none; */
-}
+
+
 .footer {
      background-color: var(--clr-main); 
     
