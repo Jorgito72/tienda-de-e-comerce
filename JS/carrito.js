@@ -48,7 +48,7 @@ function cargarProductosEnCarrito(){
 
         })
 
-actualizarBotoneseliminar();
+actualizarBotonesEliminar();
     actualizarTotalCompra();
     console.log(productosEnCacrrito.length);
 
@@ -64,7 +64,7 @@ actualizarBotoneseliminar();
 
 cargarProductosEnCarrito();
 
-function actualizarBotoneseliminar() {
+function actualizarBotonesEliminar() {
     botonesEliminar = document.querySelectorAll(".carrito_producto_eliminar");
 
     botonesEliminar.forEach(boton => {

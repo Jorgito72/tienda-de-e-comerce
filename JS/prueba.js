@@ -145,19 +145,47 @@
 // ];
 
 var productos = [];
+//const claAPI= 'AIzaSyDodDVMrykrcA6W4_esHfjRjy5n23UeTME'
+//idCliente cloud = '470469997708-de0ptgr39o142rmqcm177i9hbf5r284c.apps.googleusercontent.com'
+// funcion para traer datos de los productos desde un exel//
 
-fetch("./JSON/productos.json")
-    .then(res => res.json())
-    .then(data => {
-        productos = data;
-        // console.log(data);
-        cargarProductos(productos);
-    })
+try {
+     
+    //fetch("./JSON/productos.json")
+   //fetch("https://sheet.best/api/sheets/f90b26f3-ed56-49f5-88a1-d1855123ee7d")
+   
+    .then(res => res.text()).then(csv => {
+       // console.log(csv);
+           /*  const lines = csv.split("\n");
+            const headers = lines[0].split(",");
+            const result = [];
+            for (let i = 1; i < lines.length; i++) {
+                const obj = {};
+                const currentLine = lines[i].split(",");
+                for (let j = 0; j < headers.length; j++) {
+                    obj[headers[j]] = currentLine[j];
+                }
+                result.push(obj);
+            }
+            console.log(result); */
+          
+            productos = JSON.parse(csv);
+            
+            console.log("Ahora dataJs");
+            console.log("Ahora productos");
+            console.log(productos);
+            cargarProductos(productos);
+        })
+} catch (error) {
+    console.log(error);
+}
 
-    // funcion para traer datos de los productos desde un exel//
+console.log("test variables");
 
-    
+
 // area de constantes globales//
+
+strImgEjemplo="http://drive.google.com/uc?export=view&id=1DcezHyV_pFbOveTQKFrdwIUTEPnaWGCR";
 
 const tituloPrincipal = document.querySelector("#titulo_principal");
 const contenedorProductos = document.getElementById("contenedor_productos");
@@ -168,7 +196,7 @@ let botonesDescripcion = document.querySelectorAll(".descripcion");
 let botonVolver = document.getElementById("btnVolver");
 const numerito = document.getElementById("numerito");
 let productosEnCacrrito = [];
-
+//let document.getElementById("img-prod").src = imagenUrl;
 //
 
 function cargarProductos(productosElegidos) {
@@ -178,12 +206,19 @@ function cargarProductos(productosElegidos) {
     productosElegidos.forEach(producto => {
 
         const div = document.createElement("div");
+        
 
-        div.classList.add("col-6");
+        strImgDriveF="http://drive.google.com/uc?export=view&id="+JSON.stringify(producto.imagen).slice(33, 66);
+                                       
+
+        div.classList.add("col-6"); 
         div.classList.add("col-md-3");
-        // div.classList.add("col-sm-6");
+      
         div.innerHTML = `<div class="card contenedor_indiv" >
-        <img src="${producto.imagen}" class="card-img-top imagen_card " alt="${producto.titulo}">
+        <img src="${strImgDriveF}" class="card-img-top imagen_card " id= "img-prod" alt="${producto.titulo}">
+        
+       
+       
         <div class="card-body card-body-chico">
           <h5 class="card-title">${producto.titulo}</h5>
           <p class="card-text text-center"><span>$</span>${producto.precio}</p>
@@ -295,13 +330,13 @@ function mostrarDescripcion(e) {
     div.classList.add("col");
 
     div.innerHTML = `<div class="card contenedor_indiv" >
-                    <img src="${productoDescripto.imagen}" class="card-img-top imagen_card" alt="...">
+                    <img src="${strImgDriveF}" class="card-img-top imagen_card" alt="...">
                     <div class="card-body">
                       <h5 class="card-title">${productoDescripto.titulo}</h5>
-                      <p class="card-text">${productoDescripto.descripcion}Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <p class="card-text">${productoDescripto.descripcion}</p>
                     </div>
                     <ul class="list-group list-group-flush">
-                      <li class="list-group-item">Categoria: ${productoDescripto.categoria.nombre}</li>
+                      <li class="list-group-item">Categoria: ${productoDescripto.categoria}</li>
                       <li class="list-group-item">$ ${productoDescripto.precio}</li>
                       <li class="list-group-item">A third item</li>
                     </ul>

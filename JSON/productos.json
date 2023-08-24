@@ -142,7 +142,7 @@
     {
         "id": "accesorios-5",
         "titulo": "Set cubiertos",
-        "imagen": "./imagenes/set_cubiertos _asado.jpg",
+        "imagen": "./imagenes/imgmaiz.jpg",
         "categoria": {
             "nombre": "Accesorios",
             "id": "accesorios"
